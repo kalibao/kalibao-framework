@@ -1,0 +1,6 @@
+.crud-list .actions {
+  float: none;
+}
+.crud-list .table select.input-sm {
+  line-height: 20px;
+}
