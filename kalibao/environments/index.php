@@ -31,7 +31,6 @@ return [
         'setWritable' => [
             'backend/runtime',
             'backend/web/assets',
-            'backend/web/assets-compressed',
             'frontend/runtime',
             'frontend/web/assets',
             'data'
@@ -46,7 +45,6 @@ return [
         'setWritable' => [
             'backend/runtime',
             'backend/web/assets',
-            'backend/web/assets-compressed',
             'frontend/runtime',
             'frontend/web/assets',
             'data'

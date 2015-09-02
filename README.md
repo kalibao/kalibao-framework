@@ -1,4 +1,4 @@
-# KALIBAO FRAMEWORK 1.0.3
+# KALIBAO FRAMEWORK 1.1.0
 
 ## Prérequis
 
@@ -48,11 +48,7 @@ $ ln -s ../../data
 $ cd kalibao/static/backend
 $ ln -s ../../backend/web/assets
 ```
-- Créer un lien symbolique entre le dossier "kalibao/backend/web/assets-compressed" et "kalibao/static/backend/assets-compressed"
-```bash
-$ cd kalibao/static/backend
-$ ln -s ../../backend/web/assets-compressed
-```
+
 - Déclarer le domaine backend.kalibaoframework.lan et faire pointer son virtual host le dossier kalibao/backend/web
 - Configurer le fichier "kalibao/backend/config/main-local.php"
 - Accès à l'application backend :
@@ -67,11 +63,6 @@ $ cd kalibao/static/frontend
 $ ln -s ../../frontend/web/assets
 ```
 
-- Créer un lien symbolique entre le dossier "kalibao/frontend/web/assets-compressed" et "kalibao/static/frontend/assets-compressed"
-```bash
-$ cd kalibao/static/frontend
-$ ln -s ../../frontend/web/assets-compressed
-```
 - Déclarer le domaine frontend.kalibaoframework.lan et faire pointer son virtual host vers le dossier "kalibao/frontend/web"
 - Configurer le fichier "kalibao/frontend/config/main-local.php"
 
@@ -86,7 +77,7 @@ Backend :
 - Compresser les assets :
 
 ```bash
-$ yii/yii assetscompressor/compress kalibao/backend/config/assets.php
+$ yii/yii asset-extra kalibao/backend/config/assets.php kalibao/backend/config/assets-prod.php
 ```
 
 Frontend : 
@@ -96,5 +87,5 @@ Frontend :
 - Compresser les assets :
 
 ```bash
-$ yii/yii assetscompressor/compress kalibao/frontend/config/assets.php
+$ yii/yii asset-extra kalibao/frontend/config/assets.php kalibao/frontend/config/assets-prod.php
 ```
